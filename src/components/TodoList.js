@@ -1,4 +1,6 @@
 import {useState} from 'react'
+import AddTodo from './AddTodo'
+import EditTodo from './EditTodo'
 import Todo from './Todo'
 
 function TodoList() {
@@ -54,21 +56,15 @@ function TodoList() {
 
     return (
         <div>
-        <form>
-            <p>Add Your Task :</p>
-            <input type="text" onChange={handleInput} value={todos}/>
-            <button onClick={handleSubmit}>Add</button>
-        </form>
+
+        <AddTodo handleSubmit={handleSubmit} todos={todos} handleInput={handleInput} />
+
             {todoList.map((todo) => {
-            if(edit.id == todo.id){
-               
-               return <form key={todo.id}>
-                        <input autoFocus onChange={handleEditForm}  type="text"/>
-                        <button value={todo.id} onClick={submitEdit}>Edit</button>
-                      </form>
-            } else {
+            if(edit.id == todo.id)
+               return <EditTodo key={todo.id} handleEditForm={handleEditForm} submitEdit={submitEdit} />
+             else 
                 return <Todo key={todo.id} todo={todo} handleEdit={handleEdit} handleDelete={handleDelete}/> 
-            }
+            
             })}
         </div>
     )
