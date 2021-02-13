@@ -2,9 +2,9 @@ import React from 'react'
 
 function EditTodo({handleEditForm,submitEdit,id}) {
     return (
-        <form>
+        <form className="editForm">
             <input autoFocus onChange={handleEditForm} type="text"/>
-            <button value={id} onClick={submitEdit}>Edit</button>
+            <button className="addBtn" value={id} onClick={submitEdit}>Save</button>
       </form>
     )
 }

@@ -1,38 +1,108 @@
-.App {
+* {
+  margin:0;
+  padding: 0;
+}
+body {
+  background-color:#3498db;
+  font-family:Arial, Helvetica, sans-serif;
+
+}
+.container {
+  width:40%;
+  margin:0 auto;
+  background-color: #ecf0f1;
+  margin-top:15px;
+  border-radius: 15px;
+}
+
+header {
+  text-align: center;
+  padding-top:20px;
+  font-size: 2rem;
+  color: #2980b9;
+  border-bottom:1px groove #7f8c8d;
+}
+
+.clearList {
+  background-color: #e74c3c;
+  border:none;
+  border-radius: 5px;
+  padding:5px 20px;
+  color: #ecf0f1;
+  margin-bottom: 10px;
+  margin-top:10px;
+}
+.addTodo {
+  text-align: center;
+  color:#2ecc71 ;
+  font-size: 1rem;
+  margin-top:25px;
+  padding-bottom: 25px;
+}
+.addTodo input {
+  margin-top:10px;
+  padding:5px 10px;
+  width:60%;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+.addBtn{
+padding:7px;
+width:20%;
+font-size: 1rem;
+background-color: #2ecc71;
+color: #ecf0f1;
+border-radius: 5px;
+margin-left:5px;
+border:none;
+}
+
+.todoButtons {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.todo {
+  justify-content: space-between;
+  display: flex;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  padding:10px 0px 10px 10px;
+}
+
+.todo:nth-child(odd) {
+  background-color: #bdc3c7;
+}
+
+.delete {
+  background-color: #e74c3c;
+  border:none;
+  border-radius: 5px;
+  padding:5px 10px;
+  color: #ecf0f1;
+}
+.edit {
+  background-color: #3498db;
+  border:none;
+  border-radius: 5px;
+  padding:5px 10px;
+  color: #ecf0f1;
+  margin-right: 10px;
+}
+
+.editForm {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.editForm input{
+  margin-top:10px;
+  padding:5px 10px;
+  width:60%;
+  border-radius: 3px;
+  font-size: 1rem;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo:last-child {
+  border-radius: 0 0 15px 15px;
 }
