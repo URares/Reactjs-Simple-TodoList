@@ -50,8 +50,19 @@ function TodoList() {
         })
         console.log(newEdit)
         setEdit({})
+    }
+
+    function handleComplete(id) {
+
+        const newTodoList = todoList.map((todo) => {
+            if (todo.id == id)
+                todo.completed = !todo.completed
+            return todo
+        })
+        setTodoList(newTodoList)
 
 
+      console.log(id)
     }
 
     return (
@@ -65,7 +76,7 @@ function TodoList() {
                 if (edit.id == todo.id)
                     return <EditTodo key={todo.id} handleEditForm={handleEditForm} submitEdit={submitEdit} />
                 else
-                    return <Todo key={todo.id} todo={todo} handleEdit={handleEdit} handleDelete={handleDelete} />
+                    return <Todo key={todo.id} todo={todo} handleEdit={handleEdit} handleDelete={handleDelete} handleComplete={handleComplete} />
 
             })}
         </div>

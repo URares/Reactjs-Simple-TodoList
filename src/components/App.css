@@ -67,6 +67,9 @@ border:none;
   justify-content: space-between;
   display: flex;
   margin-bottom: 10px;
+
+}
+.todoText{
   font-size: 2rem;
   padding:10px 0px 10px 10px;
 }
@@ -105,4 +108,7 @@ border:none;
 
 .todo:last-child {
   border-radius: 0 0 15px 15px;
+}
+.completed {
+  text-decoration: line-through;
 }
